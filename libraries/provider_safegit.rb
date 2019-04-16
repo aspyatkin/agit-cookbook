@@ -207,7 +207,7 @@ class Chef
         cmd = "git ls-remote \"#{@new_resource.repository}\" "\
               "\"#{new_resource.branch}*\""
         @resolved_refs = shell_out!(cmd, run_options).stdout
-        !@resolved_refs.split('\n').map { |line| line.split('\t') }.empty?
+        !@resolved_refs.split("\n").map { |line| line.split("\t") }.empty?
       end
 
       def local_branch
@@ -236,7 +236,7 @@ class Chef
       def local_remote_diff_count
         cmd = 'git rev-list --left-right --count ' \
               "#{local_branch}...#{remote_branch}"
-        shell_out!(cmd, run_options(cwd: cwd)).stdout.strip.split('\t')
+        shell_out!(cmd, run_options(cwd: cwd)).stdout.strip.split("\t")
       end
 
       def commits_ahead

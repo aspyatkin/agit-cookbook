@@ -2,7 +2,7 @@ name 'agit'
 maintainer 'Alexander Pyatkin'
 maintainer_email 'aspyatkin@gmail.com'
 license 'MIT'
-version '0.1.1'
+version '0.1.2'
 description 'A safer replacement for Chef git resource'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 
